@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MVCProj1.Models.Classmodel>
+
+<p>
+    @Html.ActionLink("Create New", "AddClass")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.classId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cname)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.classId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cname)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditDetails", new {  id=item.classId }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.classId }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.classId })
+        </td>
+    </tr>
+}
+
+</table>

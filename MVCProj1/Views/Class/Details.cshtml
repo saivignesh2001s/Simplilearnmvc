@@ -1,0 +1,34 @@
+﻿@model MVCProj1.Models.Classmodel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Classmodel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.classId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.classId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cname)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditDetails", new {  id = Model.classId  }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

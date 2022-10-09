@@ -1,0 +1,42 @@
+﻿@model MVCProj1.Models.Studentlist
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Studentlist</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cid)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditDetails", new {  id = Model.sid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

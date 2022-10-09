@@ -1,0 +1,48 @@
+﻿@model MVCProj1.Models.Subjectmodel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Subjectmodel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.subid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.subname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cid)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
